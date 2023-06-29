@@ -1,3 +1,4 @@
-# `template`
+# Build and Deploy a React Native App (JavaScript Mastery)
 
-Template for generic repositories
+- https://www.youtube.com/watch?v=mJ3bGvy0WAY
+- https://github.com/adrianhajdin/project_react_native_jobs
