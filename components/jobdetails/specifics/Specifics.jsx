@@ -1,7 +1,4 @@
-import React from "react";
-import { View, Text } from "react-native";
-
-import styles from "./specifics.style";
+import { Text, View } from "react-native";
 
 const Specifics = () => {
   return (
