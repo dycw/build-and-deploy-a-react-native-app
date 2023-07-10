@@ -1,17 +1,16 @@
-import React from "react";
 import { useState } from "react";
 import {
+  FlatList,
+  Image,
+  Text,
   TextInput,
   TouchableOpacity,
-  Image,
-  FlatList,
   View,
-  Text,
 } from "react-native";
 
+import { useRouter } from "expo-router";
 import { icons, SIZES } from "../../../constants";
 import styles from "./welcome.style";
-import { useRouter } from "expo-router";
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
