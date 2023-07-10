@@ -1,12 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const useFetch = async (endpoint, query) => {
+const useFetch = (endpoint, query) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  console.log(process.env.RAPID_API_KEY);
 
   const options = {
     method: "GET",
@@ -31,7 +29,9 @@ const useFetch = async (endpoint, query) => {
     }
   };
 
-  useEffect(() => fetchData(), []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const refetch = () => {
     setIsLoading(true);
