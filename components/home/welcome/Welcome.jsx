@@ -14,14 +14,14 @@ import styles from "./welcome.style";
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
-const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
+export default function Welcome({ searchTerm, setSearchTerm, handleClick }) {
   const router = useRouter();
-  const [activeJobType, setActiveJobType] = useState("Full-time");
+  const [activeJobType, setActiveJobType] = useState(jobTypes[0]);
 
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Adrian</Text>
+        <Text style={styles.userName}>Hello Derek</Text>
         <Text style={styles.welcomeMessage}>Find your perfect job</Text>
       </View>
 
@@ -64,6 +64,4 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
       </View>
     </View>
   );
-};
-
-export default Welcome;
+}

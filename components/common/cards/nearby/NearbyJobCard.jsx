@@ -3,7 +3,7 @@ import { checkImageURL } from "../../../../utils";
 
 import styles from "./nearbyjobcard.style";
 
-const NearbyJobCard = ({ job, handleNavigate }) => {
+export default function NearbyJobCard({ job, handleNavigate }) {
   return (
     <TouchableOpacity style={styles.container} onPress={handleNavigate}>
       <TouchableOpacity style={styles.logoContainer}>
@@ -25,6 +25,4 @@ const NearbyJobCard = ({ job, handleNavigate }) => {
       </View>
     </TouchableOpacity>
   );
-};
-
-export default NearbyJobCard;
+}
