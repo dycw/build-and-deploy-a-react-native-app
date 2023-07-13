@@ -5,7 +5,7 @@ import { useCallback } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
-const Layout = () => {
+export default function Layout() {
   const [fontsLoaded] = useFonts({
     DMBold: require("../assets/fonts/DMSans-Bold.ttf"),
     DMMedium: require("../assets/fonts/DMSans-Medium.ttf"),
@@ -20,6 +20,4 @@ const Layout = () => {
     return null;
   }
   return <Stack onLayout={onLayoutRootView} />;
-};
-
-export default Layout;
+}

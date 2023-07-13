@@ -1,9 +1,8 @@
+import { RAPID_API_KEY } from "@env";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const RAPID_API_KEY = process.env.RAPID_API_KEY;
-
-const useFetch = (endpoint, query) => {
+export default function useFetch(endpoint, query) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -18,29 +17,27 @@ const useFetch = (endpoint, query) => {
     },
   };
 
-  const fetchData = async () => {
+  async function fetchData() {
     setIsLoading(true);
     try {
       const response = await axios.request(options);
       setData(response.data.data);
     } catch (error) {
-      alert(error);
       setError(error);
+      alert(`There is an error: ${error}`);
     } finally {
       setIsLoading(false);
     }
-  };
+  }
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const refetch = () => {
+  function refetch() {
     setIsLoading(true);
     fetchData();
-  };
+  }
 
   return { data, isLoading, error, refetch };
-};
-
-export default useFetch;
+}

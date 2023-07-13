@@ -1,4 +1,4 @@
-export const checkImageURL = (url) => {
+export function checkImageURL(url) {
   if (!url) {
     return false;
   } else {
@@ -8,4 +8,4 @@ export const checkImageURL = (url) => {
     );
     return pattern.test(url);
   }
-};
+}

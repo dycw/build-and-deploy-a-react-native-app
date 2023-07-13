@@ -1,3 +1,4 @@
+import { RAPID_API_KEY } from "@env";
 import axios from "axios";
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
@@ -10,7 +11,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { RAPID_API_KEY } from "../../hook/useFetch";
 
 import { NearbyJobCard, ScreenHeaderBtn } from "../../components";
 import { COLORS, SIZES, icons } from "../../constants";

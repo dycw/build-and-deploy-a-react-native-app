@@ -3,7 +3,7 @@ import { checkImageURL } from "../../../../utils";
 
 import styles from "./popularjobcard.style";
 
-const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
+export default function PopularJobCard({ item, selectedJob, handleCardPress }) {
   return (
     <TouchableOpacity
       style={styles.container(selectedJob, item)}
@@ -31,6 +31,4 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
       </View>
     </TouchableOpacity>
   );
-};
-
-export default PopularJobCard;
+}

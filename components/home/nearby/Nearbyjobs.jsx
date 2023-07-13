@@ -6,12 +6,12 @@ import { COLORS } from "../../../constants";
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 import styles from "./nearbyjobs.style";
 
-const Nearbyjobs = () => {
-  const router = useRouter();
+export default function Nearbyjobs() {
   const { data, isLoading, error } = useFetch("search", {
     query: "React developer",
     num_pages: 1,
   });
+  const router = useRouter();
 
   return (
     <View style={styles.container}>
@@ -38,6 +38,4 @@ const Nearbyjobs = () => {
       </View>
     </View>
   );
-};
-
-export default Nearbyjobs;
+}
